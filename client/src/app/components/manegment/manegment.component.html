@@ -1,0 +1,25 @@
+<h1>All the tasks</h1>
+<hr>
+<div *ngFor='let a of task'>
+  <ul>
+    <div>
+      <h4>
+        the discription is :
+      </h4>
+      {{a.discription}}
+    </div>
+    <div>
+      <h4>
+        the date:
+      </h4>
+      {{a.date}}
+    </div>
+  </ul>
+  <h4>
+    the sibling id is::
+  </h4>
+  {{a.sibling_id}}
+  <hr>
+</div>
+
+
