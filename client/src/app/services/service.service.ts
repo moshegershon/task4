@@ -17,5 +17,8 @@ export class ServiceService {
     gets(): Observable<any>{
       return this.httpClient.get<Siblings>('http://localhost:1212/siblings');
     }
+    delete(id: number) {
+      return this.httpClient.delete<Task>('http://localhost:1212/dtask');
+    }
 }
     

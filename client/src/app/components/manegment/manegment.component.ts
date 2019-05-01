@@ -19,6 +19,8 @@ export class ManegmentComponent implements OnInit {
     })
     
   }
+  delete(id:number){
+    this.serviceService.delete(id)
 }
 
-
+}

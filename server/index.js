@@ -58,6 +58,19 @@ app.get('/siblings', function (req, res) {
         });
     });
 });
+app.delete('/dtask', function (req, res) {
+    connection.connect(function (err, d) {
+        let data = {}
+        data = req.body;
+        connection.query('DELETE FROM `task` WHERE id LIKE ?', data, function (error, results, fields) {
+            if (error) {
+                console.log(error.sql)
+            }
+            console.log(results);
+            res.send(results)
+        });
+    });
+});
 
 app.listen(PORT, function () {
     console.log('connected')

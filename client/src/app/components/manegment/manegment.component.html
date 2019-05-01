@@ -1,25 +1,37 @@
-<h1>All the tasks</h1>
-<hr>
-<div *ngFor='let a of task'>
-  <ul>
-    <div>
-      <h4>
-        the discription is :
-      </h4>
-      {{a.discription}}
-    </div>
-    <div>
-      <h4>
-        the date:
-      </h4>
-      {{a.date}}
-    </div>
-  </ul>
-  <h4>
-    the sibling id is::
-  </h4>
-  {{a.sibling_id}}
+<div class="container">
+  <h1>All the tasks</h1>
   <hr>
-</div>
-
-
+  <div *ngFor='let a of task'>
+      <button (click)="delete()" class="btn btn-primary">X</button>
+      <ul>
+      <div class="row">
+        <h4>
+          the Discription of the task is :
+        </h4>
+        <h5>
+          {{a.discription}}
+        </h5>
+      </div>
+    </ul>
+    <ul>
+      <div class="row">
+        <h4>
+          Date of doe:
+        </h4>
+        <h5>
+          {{a.date}}
+        </h5>
+      </div>
+    </ul>
+    <ul>
+      <div class="row">
+        <h4>
+          the Siblings id is:
+        </h4>
+        <h5>
+          {{a.sibling_id}}
+        </h5>
+      </div>
+    </ul>
+    <hr>
+  </div>
